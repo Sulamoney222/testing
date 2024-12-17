@@ -1,0 +1,258 @@
+:root{
+    --clr-primary-1: rgba(97, 230, 248, 0.986);
+    --clr-primary-2: linear-gradient(to left,black, rgb(4, 76, 88));
+    --clr-primary-3: rgba(242, 248, 248, 0.945);
+    --clr-primary-4: rgb(8, 71, 80);
+
+}
+
+html{
+    scroll-behavior: smooth;
+    
+}
+.home{
+    background: var(--clr-primary-2);
+}
+.head{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 70px;
+    background: var(--clr-primary-2); 
+}
+
+.logo{
+    color: var(--clr-primary-3);
+    user-select: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    animation: slideRight 1s ease;
+}
+.tog{
+    visibility: hidden;
+}
+.rect{
+    transition: 0.5s;
+    position: fixed;
+    background: var(--clr-primary-4);
+}
+.nav-links ul{
+    display: flex;
+    justify-content: space-between;
+    transform: translateX(90px);
+}
+
+.nav-links ul li{
+    list-style: none;
+}
+
+.nav-links ul li a{
+    display: inline-block;
+    margin-left: 40px;
+    text-decoration: none;
+    color: var(--clr-primary-1);
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+}
+
+.home{
+    display: flex;
+    justify-content: space-around;
+}
+.bio{
+   margin-top: 100px;
+   width: 40%;
+ }
+
+ h1{
+    font-size: 40px;
+    color: var(--clr-primary-3);
+ }
+ .name{
+    animation: slideLeft 1s ease forwards;
+ }
+ .front{
+    transform: translateY(-60px);
+    color: var(--clr-primary-1);
+ }
+ .lorem{
+    transform: translateY(-50px);
+    color: var(--clr-primary-3);
+    animation: slideLorem 1s ease forwards;
+    animation-delay: 1.6s;
+ }
+
+ .btn{
+    margin-left: 30px;
+    padding: 7px 7px 7px 7px ;
+    background: transparent;
+    border: 1px solid var(--clr-primary-1);
+    border-radius: 5px;
+    color: var(--clr-primary-1);
+ }
+
+ .btn:hover{
+    color: var(--clr-primary-4);
+    background: var(--clr-primary-1);
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    transition: 0.9s;
+ }
+
+ .btn:active{
+    transform:scale(0.1);
+ }
+
+ section{
+    display: grid;
+    min-height: 100vh;
+ }
+ .na{
+    height: 0;
+ }
+.pics{
+
+    height: 30pc;
+    width: 30pc;
+    transform: translateY(10%);
+    border-radius: 50%;
+    border: 2px solid var(--clr-primary-1);
+   
+    animation-delay: 2s;
+}
+#contact{
+    background: blue;
+}
+#portfolio {
+    background: red;
+}
+#about {
+    background: black;
+}
+
+{$desktop:1200px;
+$laptop:1024px;
+$tablet:768px;
+$phone:480px;
+}
+
+ @media screen and (max-width: 768px) and (min-width: 480px){
+
+    .head{
+        height:auto !important;
+        background: var(--clr-primary-4) ;
+        overflow: hidden;
+       
+        
+    }
+    
+    .home{
+        display: flex;
+       justify-content: center;
+      
+        text-align: center;
+    }
+    .name .front{
+        font-size: 40px;
+        
+    }
+    .lorem{
+font-size: 30px;
+margin-top: 5px;
+
+    }
+    .btn{
+        padding: 50px 50px 50px 50px;
+    }
+    
+    .bio{
+        position: absolute;
+        transform: translateY(120%);
+        width: 100%;
+        
+    }
+    .pics{
+     margin-top: 50px;
+    height: 50pc;
+        width: 50pc;
+    }
+    .name h1{
+        font-size: 80px;
+    }
+    ul{
+        margin-right: 500px;
+        flex-direction: column;
+    }
+
+      .tog{   display: flex;
+        justify-content: end;
+        align-items: end;
+        visibility: visible;
+        margin-left: 85%; 
+        position: absolute;
+        }
+     .logo{
+        font-size: 10px;
+        margin-left: 130px;
+     }
+     
+     .na{
+        transition: 0.5s;
+        margin-top: 30px;
+      
+     }
+     
+    
+}
+
+@keyframes slideRight{
+    0% {
+        transform: translateX(-100px);
+        opacity:0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes slideLeft{
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideLorem {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
